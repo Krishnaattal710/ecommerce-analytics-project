@@ -81,6 +81,10 @@ group by
 
 -- 3) KPI snapshot (last 12 months, delivered orders)
 create view analytics.vw_kpi_snapshot_12m as
+with max_month_cte as (
+    select date_trunc('month', max(purchase_ts))::date as max_month
+    from analytics.vw_order_fact
+)
 select
     count(distinct order_id) as orders,
     round(sum(payment_value), 2) as gross_revenue,
@@ -99,8 +103,10 @@ select
     ) as on_time_delivery_pct,
     round(avg((delivered_ts::date - purchase_ts::date)), 2) as avg_delivery_days
 from analytics.vw_order_fact
+cross join max_month_cte mm
 where order_status = 'delivered'
-    and purchase_ts >= date_trunc('month', current_date) - interval '12 months';
+    and purchase_ts >= mm.max_month - interval '11 months'
+    and purchase_ts < mm.max_month + interval '1 month';
 
 -- 4) Monthly trend
 create view analytics.vw_monthly_revenue_orders as
