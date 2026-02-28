@@ -210,10 +210,12 @@ order by revenue desc;
 create view analytics.vw_payment_mix as
 select
     p.payment_type,
-    round(sum(p.payment_value), 2) as payment_value,
+    round(sum(p.payment_value)::numeric, 2) as payment_value,
     round(
-        100.0 * sum(p.payment_value)
-        / sum(sum(p.payment_value)) over (),
+        (
+            100.0 * sum(p.payment_value)
+            / sum(sum(p.payment_value)) over ()
+        )::numeric,
         2
     ) as share_pct
 from olist_order_payments p
