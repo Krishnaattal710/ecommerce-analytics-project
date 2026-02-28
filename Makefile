@@ -1,6 +1,7 @@
 PYTHON ?= python3
 DB_NAME ?= olist_analytics
 DATABASE_URL ?= postgresql+psycopg2://localhost/$(DB_NAME)
+PSQL ?= psql
 
 .PHONY: setup load sql validate run lint tree
 
@@ -12,7 +13,7 @@ load:
 	DATABASE_URL=$(DATABASE_URL) $(PYTHON) scripts/load_olist.py --data-dir data/raw --strict
 
 sql:
-	psql -d $(DB_NAME) -f sql/analytics_query_pack.sql
+	$(PSQL) -d $(DB_NAME) -f sql/analytics_query_pack.sql
 
 validate:
 	DATABASE_URL=$(DATABASE_URL) $(PYTHON) scripts/validate_data.py

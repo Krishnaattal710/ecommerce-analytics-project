@@ -58,6 +58,12 @@ brew services start postgresql@16
 createdb olist_analytics
 ```
 
+If `psql` or `createdb` is not found (keg-only formula), run:
+
+```bash
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+```
+
 Quick DB check:
 
 ```bash
@@ -98,7 +104,7 @@ python scripts/validate_data.py
 ```bash
 make setup
 make load
-make sql
+make sql PSQL=/opt/homebrew/opt/postgresql@16/bin/psql
 make validate
 ```
 
