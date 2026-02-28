@@ -5,6 +5,7 @@ End-to-end analytics portfolio project built using Python, PostgreSQL, SQL, and 
 ## Live Dashboard
 
 - Tableau Public: [Ecommerce Revenue Retention Analytics Dashboard](https://public.tableau.com/app/profile/krishna.attal/viz/UsethisnameEcommerce_Revenue_Retention_Analytics_KrishnaAttal_twbx/EcommerceRevenueRetentionAnalyticsDashboard_?publish=yes)
+- GitHub Repository: [ecommerce-analytics-project](https://github.com/Krishnaattal710/ecommerce-analytics-project)
 - Workbook: `Ecommerce_Revenue_Retention_Analytics_KrishnaAttal.twbx`
 
 ## Problem Statement
