@@ -9,6 +9,7 @@ __pycache__/
 # Large/raw data files should stay out of git
 /data/raw/*.csv
 /data/raw/*.zip
+/dashboards/exports/*.csv
 
 # Local env files
 .env
