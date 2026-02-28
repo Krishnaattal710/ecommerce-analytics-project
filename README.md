@@ -120,6 +120,20 @@ Save screenshots in `images/`.
 
 If using Tableau Public, publish and copy your public dashboard URL.
 
+## 7.1 Optional: materialize analytics tables (for BI speed)
+
+If you prefer physical tables instead of views in your BI tool:
+
+```bash
+psql -d olist_analytics -f sql/materialize_analytics_tables.sql
+```
+
+This creates tables like:
+- `analytics.fact_order`
+- `analytics.bridge_order_category`
+- `analytics.monthly_revenue_orders`
+- `analytics.cohort_retention_0_6`
+
 ## 8) Key queries/views to use in BI
 
 - `analytics.vw_order_fact`
