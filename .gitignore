@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+
+# Large/raw data files should stay out of git
+/data/raw/*.csv
+/data/raw/*.zip
+
+# Local env files
+.env
