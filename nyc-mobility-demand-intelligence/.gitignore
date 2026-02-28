@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+
+# Raw and intermediate data
+data/raw/*.parquet
+data/raw/*.csv
+data/raw/_invalid/
+dashboards/exports/*.csv
+
+# Local env
+.env
