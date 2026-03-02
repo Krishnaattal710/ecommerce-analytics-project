@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Snake</h1>
+      <p class="meta">Score: <span id="score">0</span></p>
+      <p class="meta" id="status">Press Start.</p>
+
+      <section class="actions">
+        <button id="start-btn" type="button">Start</button>
+        <button id="pause-btn" type="button">Pause</button>
+        <button id="restart-btn" type="button">Restart</button>
+      </section>
+
+      <section id="board" class="board" aria-label="Snake game board"></section>
+
+      <section class="controls" aria-label="On-screen controls">
+        <button type="button" data-direction="UP">Up</button>
+        <button type="button" data-direction="LEFT">Left</button>
+        <button type="button" data-direction="DOWN">Down</button>
+        <button type="button" data-direction="RIGHT">Right</button>
+      </section>
+
+      <p class="hint">Controls: Arrow keys or WASD.</p>
+    </main>
+
+    <script src="./snakeGame.js"></script>
+  </body>
+</html>
