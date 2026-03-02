@@ -2,6 +2,12 @@
 
 Second portfolio project focused on urban mobility analytics using NYC TLC trip data. This project builds a repeatable data pipeline from raw parquet files to PostgreSQL analytics tables and Tableau-ready exports.
 
+## Live Dashboard
+
+- Tableau Public: [NYC Mobility Demand Intelligence Dashboard](https://public.tableau.com/app/profile/krishna.attal/viz/NYC_Mobility_Demand_Intelligence_KrishnaAttal/Dashboard1?publish=yes)
+- GitHub Repository: [ecommerce-analytics-project](https://github.com/Krishnaattal710/ecommerce-analytics-project)
+- Project path in repo: `nyc-mobility-demand-intelligence/`
+
 ## What this project demonstrates
 
 - Real-world transportation analytics workflow
@@ -122,6 +128,12 @@ Main files:
 1. Peak demand hour is **18:00**, followed by **17:00** and **19:00**.
 2. **Manhattan** contributes the largest pickup volume by a wide margin.
 3. Top pickup zones include **Upper East Side South**, **JFK Airport**, and **Midtown Center**.
+
+## Dashboard Screenshots
+
+![Dashboard 1](images/dashboard-1.png)
+![Dashboard 2](images/dashboard-2.png)
+![Dashboard 3](images/dashboard-3.png)
 
 ## Suggested resume bullets
 
